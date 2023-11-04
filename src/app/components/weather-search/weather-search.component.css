@@ -1,0 +1,40 @@
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.container-form {
+  display: flex;
+  justify-content: space-around;
+}
+.form {
+  display: flex;
+  align-items: center;
+}
+form  {
+  height: 35px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+button {
+  border: none;
+  font: inherit;
+  background: #00331e;
+  color: white;
+  padding: 0 10px;
+}
+button:hover {
+  background: #29694c;
+  cursor: pointer;
+}
+.card-weather {
+  width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+

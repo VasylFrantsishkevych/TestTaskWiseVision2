@@ -1,0 +1,11 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  background: #0b8059;
+  color: #fff;
+}
+.wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+

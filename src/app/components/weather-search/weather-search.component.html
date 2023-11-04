@@ -1,0 +1,13 @@
+<div class="container-form">
+  <h2>Weather in your city</h2>
+  <div class="form">
+    <form [formGroup]="form">
+      <input type="text" formControlName="search" placeholder="Name city">
+      <button (click)="search()">Search</button>
+    </form>
+  </div>
+</div>
+<div class="card-weather">
+  <app-weather *ngIf="weather" [weather]="weather"></app-weather>
+</div>
+

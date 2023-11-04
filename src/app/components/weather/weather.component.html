@@ -1,0 +1,27 @@
+<h3>Weather {{weather.location.name}}/{{weather.location.country}}: {{weather.current.condition.text}}</h3>
+<h4>{{weather.location.localtime}}</h4>
+<div class="temperature">
+  <div *ngIf="weather.current.temp_c > 0; else weatherInfo">+{{weather.current.temp_c}}° C</div>
+  <img src="{{weather.current.condition.icon}}" alt="{{weather.current.condition.text}}">
+</div>
+<div>
+  <div class="info">
+    <span class="title">Feels like:</span> <span *ngIf="weather.current.temp_c > 0; else weatherInfo">{{weather.current.feelslike_c}}° C</span>
+  </div>
+  <div class="info">
+    <span class="title">Humidity:</span> <span>{{weather.current.humidity}} m</span>
+  </div>
+  <div class="info">
+    <span class="title">Pressure:</span> <span>{{weather.current.pressure_mb}} mm</span>
+  </div>
+  <div class="info">
+    <span class="title">Wind:</span> <span>{{weather.current.wind_kph}} km/h</span>
+  </div>
+  <div class="info">
+    <span class="title">Precipitation:</span> <span>{{weather.current.precip_mm}} m</span>
+  </div>
+</div>
+
+<ng-template #weatherInfo>
+  -{{weather.current.temp_c}}° C
+</ng-template>
